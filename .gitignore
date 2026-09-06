@@ -17,6 +17,7 @@ dataset/**
 !docs/images/core-torso-localization.png
 !docs/images/elliptical-torso-volume.png
 !docs/images/actual-vs-predicted-weight.png
+!docs/images/cow-001-rgb-pointcloud-2x2.png
 
 # Python and local tool caches
 __pycache__/

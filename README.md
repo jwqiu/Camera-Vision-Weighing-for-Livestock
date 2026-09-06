@@ -2,6 +2,8 @@
 
 This project estimates cattle live weight from Topview and Rightview depth point clouds. It uses automatic point-cloud processing and geometric body measurements instead of manual feature annotation.
 
+![Cow 1 Topview and Rightview RGB images with corresponding point clouds](docs/images/cow-001-rgb-pointcloud-2x2.png)
+
 ## 1. Dataset
 
 ### 1.1 Data Source
@@ -55,13 +57,13 @@ The project also evaluates projected area, projected volume, torso length, local
 
 Results on the selected 61 cattle:
 
-| Model | Pearson r | Predictive R² | RMSE | MAE |
-|---|---:|---:|---:|---:|
-| Elliptical torso volume | 0.643 | 0.413 | 52.7 kg | 39.7 kg |
-| Elliptical volume + Rightview median depth | **0.651** | **0.419** | **52.4 kg** | **39.1 kg** |
-| Elliptical volume + rump height + rump width | 0.612 | 0.370 | 54.5 kg | 41.4 kg |
+| Model | Pearson r | Predictive R² | MAE |
+|---|---:|---:|---:|
+| Elliptical torso volume | 0.643 | 0.413 | 39.7 kg |
+| Elliptical volume + Rightview median depth | **0.651** | **0.419** | **39.1 kg** |
+| Elliptical volume + rump height + rump width | 0.612 | 0.370 | 41.4 kg |
 
-The current best result is a leave-one-out cross-validation MAE of **39.1 kg** and RMSE of **52.4 kg**.
+The current best result is a leave-one-out cross-validation MAE of **39.1 kg**.
 
 ### 3.2 Visual Examples
 

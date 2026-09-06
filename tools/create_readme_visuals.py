@@ -99,7 +99,6 @@ def save_prediction_plot() -> None:
     low = float(min(actual.min(), predicted.min()) - 10)
     high = float(max(actual.max(), predicted.max()) + 10)
     mae = float(np.mean(np.abs(predicted - actual)))
-    rmse = float(np.sqrt(np.mean((predicted - actual) ** 2)))
 
     image, draw = canvas(820, 760, "Actual versus predicted live weight")
     left, top, right, bottom = 105, 95, 770, 675
@@ -109,7 +108,7 @@ def save_prediction_plot() -> None:
     py = scale(predicted, low, high, bottom, top)
     for x, y in zip(px, py):
         draw.ellipse((x - 5, y - 5, x + 5, y + 5), fill=COLORS["blue"])
-    draw.text((130, 120), f"LOOCV MAE = {mae:.1f} kg\nLOOCV RMSE = {rmse:.1f} kg", font=LABEL, fill=COLORS["dark"], spacing=8)
+    draw.text((130, 120), f"LOOCV MAE = {mae:.1f} kg", font=LABEL, fill=COLORS["dark"])
     draw.text((440, 715), "Actual weight (kg)", font=LABEL, fill=COLORS["dark"], anchor="ma")
     draw.text((18, 350), "Predicted weight (kg)", font=LABEL, fill=COLORS["dark"])
     image.save(OUTPUT / "actual-vs-predicted-weight.png", optimize=True)
