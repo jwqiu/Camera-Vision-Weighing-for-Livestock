@@ -1,0 +1,259 @@
+{
+  "experiment": "top_right_fixed_rigid_endpoint_anchor_3train_3validation_v1.0",
+  "random_seed": 20260906,
+  "strict_candidate_count": 61,
+  "training_cow_ids": [
+    129,
+    13,
+    119
+  ],
+  "validation_cow_ids": [
+    120,
+    140,
+    128
+  ],
+  "top_to_right_matrix": [
+    [
+      -1.0,
+      0.0,
+      0.0,
+      0.2050749976744654
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0,
+      2.135638280693131
+    ],
+    [
+      -0.0,
+      -1.0,
+      -0.0,
+      2.0057162002716065
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "matrix_scope": "preliminary fixed rigid transform; longitudinal row is the tested component",
+  "anchor_definition": "Top PCA robust rear/head endpoints paired with Right segmented silhouette 99.5%/0.5% x quantiles",
+  "validation_reference": "held-out within-cow rear-to-head proportional mapping; not physical calibration ground truth",
+  "diagnostics": {
+    "unconstrained_longitudinal_scale": 1.4543889018105234,
+    "unconstrained_longitudinal_direction_rejected": [
+      -0.8444993532382974,
+      -0.5355565725300152
+    ],
+    "longitudinal_direction_constraint": "right_x = -top_x + tx (fixed opposing chute axes)",
+    "training_cow_midpoint_offset_samples": [
+      {
+        "cow_id": 129,
+        "offset_m": 0.2050749976744654
+      },
+      {
+        "cow_id": 13,
+        "offset_m": 0.437461919410705
+      },
+      {
+        "cow_id": 119,
+        "offset_m": 0.18222692091751108
+      }
+    ],
+    "training_anchor_rmse_m": 0.19521320173841247,
+    "training_anchor_median_absolute_error_m": 0.14974532477664937,
+    "training_anchor_residuals": [
+      {
+        "cow_id": 129,
+        "anchor": "rear",
+        "residual_m": 0.06366925832414638
+      },
+      {
+        "cow_id": 129,
+        "anchor": "head",
+        "residual_m": -0.0636692583241465
+      },
+      {
+        "cow_id": 13,
+        "anchor": "rear",
+        "residual_m": 0.34818948250436643
+      },
+      {
+        "cow_id": 13,
+        "anchor": "head",
+        "residual_m": 0.11658436096811275
+      },
+      {
+        "cow_id": 119,
+        "anchor": "rear",
+        "residual_m": 0.18290628858518598
+      },
+      {
+        "cow_id": 119,
+        "anchor": "head",
+        "residual_m": -0.22860244209909464
+      }
+    ],
+    "vertical_translation_samples_m": [
+      2.135638280693131,
+      2.1284528712696305,
+      2.1402100152659767
+    ],
+    "lateral_translation_samples_m": [
+      1.9564549904632569,
+      2.0594841640319825,
+      2.0057162002716065
+    ]
+  },
+  "validation_mean_absolute_boundary_error_m": 0.07260514356923303,
+  "validation_median_absolute_boundary_error_m": 0.07119547259770645,
+  "validation_max_absolute_boundary_error_m": 0.11650748310561376,
+  "validation_per_cow_mean_absolute_error_m": [
+    0.0921500131706478,
+    0.0764018318040163,
+    0.04926358573303499
+  ],
+  "acceptance_rule": "preliminary pass only if validation mean <= 0.05 m and max <= 0.10 m",
+  "preliminary_pass": false,
+  "limitations": [
+    "No calibration target or author-supplied extrinsic matrix is available.",
+    "The complete 4x4 matrix vertical/lateral components are provisional; only longitudinal boundary transfer is evaluated.",
+    "The validation reference is an independent proportional silhouette estimate, not surveyed 3-D ground truth."
+  ],
+  "records": [
+    {
+      "cow_id": 129,
+      "split": "train",
+      "top_source_ply": "dataset/129/top-15.41.02.256.ply",
+      "right_source_ply": "dataset/129/right-15.41.02.257.ply",
+      "top_rear_boundary_ratio": 0.005950386564390203,
+      "top_head_boundary_ratio": 0.7561971189880181,
+      "right_robust_head_x_m": -1.121639260649681,
+      "right_robust_rear_x_m": 0.8437412559986118,
+      "matrix_predicted_rear_x_m": 0.7691349976744655,
+      "matrix_predicted_head_x_m": -0.6098500023255347,
+      "reference_rear_x_m": 0.8320464821784336,
+      "reference_head_x_m": -0.6424738284060098,
+      "rear_error_m": -0.06291148450396811,
+      "head_error_m": 0.032623826080475093,
+      "mean_absolute_boundary_error_m": 0.0477676552922216,
+      "matrix_predicted_core_length_m": 1.3789850000000001,
+      "reference_core_length_m": 1.4745203105844433,
+      "core_length_error_m": -0.0955353105844432,
+      "right_ground_fit_inlier_fraction": 0.9487333333333333,
+      "method_version": "top_right_fixed_rigid_endpoint_anchor_3train_3validation_v1.0"
+    },
+    {
+      "cow_id": 13,
+      "split": "train",
+      "top_source_ply": "dataset/13/top-12.59.51.546.ply",
+      "right_source_ply": "dataset/13/right-12.59.51.501.ply",
+      "top_rear_boundary_ratio": 0.01261778773664697,
+      "top_head_boundary_ratio": 0.7339393642148626,
+      "right_robust_head_x_m": -1.0966386413574218,
+      "right_robust_rear_x_m": 0.8945464801788318,
+      "matrix_predicted_rear_x_m": 0.5241549976744654,
+      "matrix_predicted_head_x_m": -0.7450680023255345,
+      "reference_rear_x_m": 0.8694221289709178,
+      "reference_head_x_m": -0.5668626619555802,
+      "rear_error_m": -0.34526713129645237,
+      "head_error_m": -0.17820534036995428,
+      "mean_absolute_boundary_error_m": 0.2617362358332033,
+      "matrix_predicted_core_length_m": 1.2692229999999998,
+      "reference_core_length_m": 1.436284790926498,
+      "core_length_error_m": -0.1670617909264982,
+      "right_ground_fit_inlier_fraction": 0.9962,
+      "method_version": "top_right_fixed_rigid_endpoint_anchor_3train_3validation_v1.0"
+    },
+    {
+      "cow_id": 119,
+      "split": "train",
+      "top_source_ply": "dataset/119/top-13.34.35.017.ply",
+      "right_source_ply": "dataset/119/right-13.34.35.087.ply",
+      "top_rear_boundary_ratio": 0.00034485627647022485,
+      "top_head_boundary_ratio": 0.737159813133708,
+      "right_robust_head_x_m": -1.2117124444246292,
+      "right_robust_rear_x_m": 1.1253352862596513,
+      "matrix_predicted_rear_x_m": 0.9417649976744653,
+      "matrix_predicted_head_x_m": -0.4770010023255346,
+      "reference_rear_x_m": 1.1245293406813144,
+      "reference_head_x_m": -0.5974423821761292,
+      "rear_error_m": -0.18276434300684907,
+      "head_error_m": 0.12044137985059461,
+      "mean_absolute_boundary_error_m": 0.15160286142872184,
+      "matrix_predicted_core_length_m": 1.418766,
+      "reference_core_length_m": 1.7219717228574436,
+      "core_length_error_m": -0.3032057228574436,
+      "right_ground_fit_inlier_fraction": 0.9624,
+      "method_version": "top_right_fixed_rigid_endpoint_anchor_3train_3validation_v1.0"
+    },
+    {
+      "cow_id": 120,
+      "split": "validation",
+      "top_source_ply": "dataset/120/top-13.38.22.918.ply",
+      "right_source_ply": "dataset/120/right-13.38.22.934.ply",
+      "top_rear_boundary_ratio": 0.007836233397579022,
+      "top_head_boundary_ratio": 0.7681286167960043,
+      "right_robust_head_x_m": -1.3399126851558685,
+      "right_robust_rear_x_m": 0.7405001413822169,
+      "matrix_predicted_rear_x_m": 0.6564049976744655,
+      "matrix_predicted_head_x_m": -0.7410170023255347,
+      "reference_rear_x_m": 0.7241975409101473,
+      "reference_head_x_m": -0.8575244854311485,
+      "rear_error_m": -0.06779254323568185,
+      "head_error_m": 0.11650748310561376,
+      "mean_absolute_boundary_error_m": 0.0921500131706478,
+      "matrix_predicted_core_length_m": 1.3974220000000002,
+      "reference_core_length_m": 1.5817220263412959,
+      "core_length_error_m": -0.18430002634129572,
+      "right_ground_fit_inlier_fraction": 0.9836,
+      "method_version": "top_right_fixed_rigid_endpoint_anchor_3train_3validation_v1.0"
+    },
+    {
+      "cow_id": 140,
+      "split": "validation",
+      "top_source_ply": "dataset/140/top-16.18.35.453.ply",
+      "right_source_ply": "dataset/140/right-16.18.35.500.ply",
+      "top_rear_boundary_ratio": -0.005159009496499099,
+      "top_head_boundary_ratio": 0.740533694959032,
+      "right_robust_head_x_m": -1.0305189752578736,
+      "right_robust_rear_x_m": 1.1563760471343985,
+      "matrix_predicted_rear_x_m": 1.0894529976744654,
+      "matrix_predicted_head_x_m": -0.38849500232553463,
+      "reference_rear_x_m": 1.167658259322767,
+      "reference_head_x_m": -0.4630934042852657,
+      "rear_error_m": -0.07820526164830155,
+      "head_error_m": 0.07459840195973105,
+      "mean_absolute_boundary_error_m": 0.0764018318040163,
+      "matrix_predicted_core_length_m": 1.477948,
+      "reference_core_length_m": 1.6307516636080326,
+      "core_length_error_m": -0.15280366360803255,
+      "right_ground_fit_inlier_fraction": 0.9037333333333334,
+      "method_version": "top_right_fixed_rigid_endpoint_anchor_3train_3validation_v1.0"
+    },
+    {
+      "cow_id": 128,
+      "split": "validation",
+      "top_source_ply": "dataset/128/top-15.34.24.764.ply",
+      "right_source_ply": "dataset/128/right-15.34.24.731.ply",
+      "top_rear_boundary_ratio": -0.000799258840071029,
+      "top_head_boundary_ratio": 0.7570714615284119,
+      "right_robust_head_x_m": -1.0107330322265624,
+      "right_robust_rear_x_m": 1.0236141592264176,
+      "matrix_predicted_rear_x_m": 0.9876299976744654,
+      "matrix_predicted_head_x_m": -0.4556150023255346,
+      "reference_rear_x_m": 1.02524012920296,
+      "reference_head_x_m": -0.5165320422631099,
+      "rear_error_m": -0.037610131528494684,
+      "head_error_m": 0.0609170399375753,
+      "mean_absolute_boundary_error_m": 0.04926358573303499,
+      "matrix_predicted_core_length_m": 1.443245,
+      "reference_core_length_m": 1.54177217146607,
+      "core_length_error_m": -0.09852717146607004,
+      "right_ground_fit_inlier_fraction": 0.8957333333333334,
+      "method_version": "top_right_fixed_rigid_endpoint_anchor_3train_3validation_v1.0"
+    }
+  ]
+}

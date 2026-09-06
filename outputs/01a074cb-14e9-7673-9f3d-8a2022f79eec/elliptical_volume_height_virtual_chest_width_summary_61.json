@@ -1,0 +1,218 @@
+{
+  "height_primary_definition": "within PCA 45%/48% core torso, split longitudinally every 1 cm; take median ground-relative surface height in each slice, then median across slices",
+  "height_sensitivity_definition": "median of ground-relative median heights in occupied 1 cm x 1 cm XY cells",
+  "rump_definition": "1 cm thick perpendicular slice centered at 5% of full PCA length from rear to head; height is maximum ground-relative point height; literal width is maximum minus minimum lateral; P98 minus P2 width is retained as a robustness sensitivity check",
+  "models": [
+    {
+      "model": "ellipse_volume",
+      "n": 61,
+      "model_type": "ordinary_least_squares_linear_regression",
+      "validation": "leave_one_out_cross_validation",
+      "features": "V",
+      "loocv_pearson_r": 0.6433868869741779,
+      "loocv_predictive_r_squared": 0.4126889865262786,
+      "loocv_rmse_kg": 52.65322198395513,
+      "loocv_mae_kg": 39.71141969500138
+    },
+    {
+      "model": "ellipse_volume_plus_rightview_median_depth_original",
+      "n": 61,
+      "model_type": "ordinary_least_squares_linear_regression",
+      "validation": "leave_one_out_cross_validation",
+      "features": "V+D",
+      "loocv_pearson_r": 0.6507482830488351,
+      "loocv_predictive_r_squared": 0.4192010877072787,
+      "loocv_rmse_kg": 52.360498981250885,
+      "loocv_mae_kg": 39.081256126640746
+    },
+    {
+      "model": "ellipse_volume_plus_slice_median_height",
+      "n": 61,
+      "model_type": "ordinary_least_squares_linear_regression",
+      "validation": "leave_one_out_cross_validation",
+      "features": "V+H_slice",
+      "loocv_pearson_r": 0.627731283628123,
+      "loocv_predictive_r_squared": 0.3910670452023972,
+      "loocv_rmse_kg": 53.613680083418295,
+      "loocv_mae_kg": 40.25999616968512
+    },
+    {
+      "model": "ellipse_volume_plus_virtual_chest_width",
+      "n": 61,
+      "model_type": "ordinary_least_squares_linear_regression",
+      "validation": "leave_one_out_cross_validation",
+      "features": "V+W_chest",
+      "loocv_pearson_r": 0.6292254371907869,
+      "loocv_predictive_r_squared": 0.3926593769275073,
+      "loocv_rmse_kg": 53.54353554100954,
+      "loocv_mae_kg": 40.299251844698055
+    },
+    {
+      "model": "ellipse_volume_plus_slice_median_height_plus_virtual_chest_width",
+      "n": 61,
+      "model_type": "ordinary_least_squares_linear_regression",
+      "validation": "leave_one_out_cross_validation",
+      "features": "V+H_slice+W_chest",
+      "loocv_pearson_r": 0.6194254228450741,
+      "loocv_predictive_r_squared": 0.37849907172811237,
+      "loocv_rmse_kg": 54.16412980962264,
+      "loocv_mae_kg": 40.40815104134537
+    },
+    {
+      "model": "ellipse_volume_plus_grid_median_height_plus_virtual_chest_width_sensitivity",
+      "n": 61,
+      "model_type": "ordinary_least_squares_linear_regression",
+      "validation": "leave_one_out_cross_validation",
+      "features": "V+H_grid+W_chest",
+      "loocv_pearson_r": 0.6200426280967356,
+      "loocv_predictive_r_squared": 0.37910915367030085,
+      "loocv_rmse_kg": 54.13753880279887,
+      "loocv_mae_kg": 40.2413630888958
+    },
+    {
+      "model": "ellipse_volume_plus_rump_5pct_height",
+      "n": 61,
+      "model_type": "ordinary_least_squares_linear_regression",
+      "validation": "leave_one_out_cross_validation",
+      "features": "V+H_rump",
+      "loocv_pearson_r": 0.6305571886158817,
+      "loocv_predictive_r_squared": 0.3952085602843287,
+      "loocv_rmse_kg": 53.43104856895681,
+      "loocv_mae_kg": 40.51223885677669
+    },
+    {
+      "model": "ellipse_volume_plus_rump_5pct_width",
+      "n": 61,
+      "model_type": "ordinary_least_squares_linear_regression",
+      "validation": "leave_one_out_cross_validation",
+      "features": "V+W_rump",
+      "loocv_pearson_r": 0.6245086938193123,
+      "loocv_predictive_r_squared": 0.3871058894761521,
+      "loocv_rmse_kg": 53.78777796950114,
+      "loocv_mae_kg": 40.53940451318063
+    },
+    {
+      "model": "ellipse_volume_plus_rump_5pct_height_plus_width",
+      "n": 61,
+      "model_type": "ordinary_least_squares_linear_regression",
+      "validation": "leave_one_out_cross_validation",
+      "features": "V+H_rump+W_rump",
+      "loocv_pearson_r": 0.6117853931558491,
+      "loocv_predictive_r_squared": 0.3696843713914295,
+      "loocv_rmse_kg": 54.54688032164738,
+      "loocv_mae_kg": 41.39840398075098
+    },
+    {
+      "model": "ellipse_volume_plus_rump_5pct_height_plus_robust_width_sensitivity",
+      "n": 61,
+      "model_type": "ordinary_least_squares_linear_regression",
+      "validation": "leave_one_out_cross_validation",
+      "features": "V+H_rump+W_rump_robust",
+      "loocv_pearson_r": 0.6117423036855921,
+      "loocv_predictive_r_squared": 0.3696622959947009,
+      "loocv_rmse_kg": 54.54783550459528,
+      "loocv_mae_kg": 41.33790798242447
+    }
+  ],
+  "pearson_correlations": {
+    "ground_truth_weight_kg": {
+      "ground_truth_weight_kg": 0.9999999999999998,
+      "elliptical_core_torso_volume_m3": 0.6719687308818969,
+      "rightview_median_body_depth_m": 0.25662630963361543,
+      "core_1cm_slice_median_height_m": 0.490526232198687,
+      "core_1cm_grid_cell_median_height_m": 0.4991421582050934,
+      "virtual_chest_width_m": 0.5649192196907762,
+      "rump_5pct_height_m": 0.5632388625229252,
+      "rump_5pct_width_m": 0.44022839476508396,
+      "rump_5pct_width_robust_p98_p02_m": 0.4486278153694268
+    },
+    "elliptical_core_torso_volume_m3": {
+      "ground_truth_weight_kg": 0.6719687308818968,
+      "elliptical_core_torso_volume_m3": 1.0,
+      "rightview_median_body_depth_m": 0.6179118680893987,
+      "core_1cm_slice_median_height_m": 0.7619564761229294,
+      "core_1cm_grid_cell_median_height_m": 0.7805839222201988,
+      "virtual_chest_width_m": 0.7730652602818017,
+      "rump_5pct_height_m": 0.8123871336514142,
+      "rump_5pct_width_m": 0.6793201329950486,
+      "rump_5pct_width_robust_p98_p02_m": 0.6816829777166172
+    },
+    "rightview_median_body_depth_m": {
+      "ground_truth_weight_kg": 0.25662630963361543,
+      "elliptical_core_torso_volume_m3": 0.6179118680893988,
+      "rightview_median_body_depth_m": 1.0,
+      "core_1cm_slice_median_height_m": 0.4488300209898413,
+      "core_1cm_grid_cell_median_height_m": 0.44197267897521886,
+      "virtual_chest_width_m": 0.26527511238346696,
+      "rump_5pct_height_m": 0.37162606117494246,
+      "rump_5pct_width_m": 0.3459154142744663,
+      "rump_5pct_width_robust_p98_p02_m": 0.35854810103861506
+    },
+    "core_1cm_slice_median_height_m": {
+      "ground_truth_weight_kg": 0.49052623219868696,
+      "elliptical_core_torso_volume_m3": 0.7619564761229295,
+      "rightview_median_body_depth_m": 0.44883002098984126,
+      "core_1cm_slice_median_height_m": 1.0,
+      "core_1cm_grid_cell_median_height_m": 0.99498205946625,
+      "virtual_chest_width_m": 0.7541544194493629,
+      "rump_5pct_height_m": 0.861022116244479,
+      "rump_5pct_width_m": 0.6390772274940306,
+      "rump_5pct_width_robust_p98_p02_m": 0.6408559348028162
+    },
+    "core_1cm_grid_cell_median_height_m": {
+      "ground_truth_weight_kg": 0.4991421582050934,
+      "elliptical_core_torso_volume_m3": 0.7805839222201988,
+      "rightview_median_body_depth_m": 0.44197267897521886,
+      "core_1cm_slice_median_height_m": 0.99498205946625,
+      "core_1cm_grid_cell_median_height_m": 1.0,
+      "virtual_chest_width_m": 0.7731211044095728,
+      "rump_5pct_height_m": 0.8717587288773864,
+      "rump_5pct_width_m": 0.6602467455832338,
+      "rump_5pct_width_robust_p98_p02_m": 0.6565461446734193
+    },
+    "virtual_chest_width_m": {
+      "ground_truth_weight_kg": 0.5649192196907762,
+      "elliptical_core_torso_volume_m3": 0.7730652602818016,
+      "rightview_median_body_depth_m": 0.26527511238346696,
+      "core_1cm_slice_median_height_m": 0.7541544194493629,
+      "core_1cm_grid_cell_median_height_m": 0.7731211044095728,
+      "virtual_chest_width_m": 0.9999999999999998,
+      "rump_5pct_height_m": 0.7524348489453324,
+      "rump_5pct_width_m": 0.7081648785450484,
+      "rump_5pct_width_robust_p98_p02_m": 0.7147261779187752
+    },
+    "rump_5pct_height_m": {
+      "ground_truth_weight_kg": 0.5632388625229251,
+      "elliptical_core_torso_volume_m3": 0.8123871336514141,
+      "rightview_median_body_depth_m": 0.37162606117494246,
+      "core_1cm_slice_median_height_m": 0.861022116244479,
+      "core_1cm_grid_cell_median_height_m": 0.8717587288773863,
+      "virtual_chest_width_m": 0.7524348489453324,
+      "rump_5pct_height_m": 1.0,
+      "rump_5pct_width_m": 0.6033158036253179,
+      "rump_5pct_width_robust_p98_p02_m": 0.5914118823942963
+    },
+    "rump_5pct_width_m": {
+      "ground_truth_weight_kg": 0.44022839476508396,
+      "elliptical_core_torso_volume_m3": 0.6793201329950485,
+      "rightview_median_body_depth_m": 0.34591541427446626,
+      "core_1cm_slice_median_height_m": 0.6390772274940306,
+      "core_1cm_grid_cell_median_height_m": 0.6602467455832338,
+      "virtual_chest_width_m": 0.7081648785450484,
+      "rump_5pct_height_m": 0.6033158036253179,
+      "rump_5pct_width_m": 1.0,
+      "rump_5pct_width_robust_p98_p02_m": 0.98354367428545
+    },
+    "rump_5pct_width_robust_p98_p02_m": {
+      "ground_truth_weight_kg": 0.4486278153694268,
+      "elliptical_core_torso_volume_m3": 0.6816829777166172,
+      "rightview_median_body_depth_m": 0.35854810103861506,
+      "core_1cm_slice_median_height_m": 0.6408559348028163,
+      "core_1cm_grid_cell_median_height_m": 0.6565461446734193,
+      "virtual_chest_width_m": 0.7147261779187752,
+      "rump_5pct_height_m": 0.5914118823942963,
+      "rump_5pct_width_m": 0.9835436742854499,
+      "rump_5pct_width_robust_p98_p02_m": 1.0
+    }
+  }
+}

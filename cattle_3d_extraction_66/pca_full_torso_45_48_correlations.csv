@@ -1,0 +1,4 @@
+﻿metric_code,metric_label_zh,metric_field,outcome_field,n,pearson_r,r_squared,fisher_95_ci_lower,fisher_95_ci_upper,correlation_method,confidence_interval_method,analysis_population,method_version,calculated_on
+core_torso_projected_volume,核心躯干投影体积,pca_full_torso_projected_volume_m3,ground_truth_weight_kg,62,0.641576,0.41162,0.46657,0.76824,Pearson,Fisher_z_95pct,62 qualified cattle including cow 150 endpoint fallback,pca_full_torso_45_48_1cm_column_sum_v1.0,2026-09-06
+core_torso_projected_area,核心躯干投影面积,pca_full_torso_projected_area_m2,ground_truth_weight_kg,62,0.644744,0.415695,0.470787,0.770445,Pearson,Fisher_z_95pct,62 qualified cattle including cow 150 endpoint fallback,pca_full_torso_45_48_1cm_column_sum_v1.0,2026-09-06
+heart_girth,胸围,ground_truth_heart_girth_cm,ground_truth_weight_kg,62,0.933968,0.872296,0.892366,0.959831,Pearson,Fisher_z_95pct,62 qualified cattle including cow 150 endpoint fallback,pca_full_torso_45_48_1cm_column_sum_v1.0,2026-09-06

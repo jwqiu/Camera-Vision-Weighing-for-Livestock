@@ -1,0 +1,14 @@
+{
+  "method_version": "top_height_cc_pca_v1.0",
+  "source": "organized top-view PLY point cloud",
+  "ground_removal": "robust plane z=a*x+b*y+c fitted to floor-depth points",
+  "segmentation": {
+    "minimum_height_m": 0.1,
+    "seed_height_m": 0.22,
+    "maximum_height_m": 1.85,
+    "component": "dense-seeded 8-connected component"
+  },
+  "long_axis": "first PCA axis in camera x-y plane; endpoints use 0.5% and 99.5% projection quantiles",
+  "width": "1% to 99% projection span perpendicular to long axis",
+  "boundary_policy": "axis_extent_complete is false when the extracted component touches the image boundary"
+}

@@ -1,0 +1,171 @@
+{
+  "cattle_count": 61,
+  "torso_definition": "PCA rear first below 45% to head first below 48%",
+  "station_ratios_within_torso": [
+    0.05,
+    0.14,
+    0.23,
+    0.32,
+    0.41,
+    0.5,
+    0.59,
+    0.68,
+    0.77,
+    0.86,
+    0.95
+  ],
+  "width_definition": "11 separate top-view body widths; not averaged",
+  "height_definition": "11 separate ground-relative top-view heights; not averaged",
+  "validation": "outer leave-one-cow-out; Ridge/PLS tuning performed inside each outer training fold",
+  "groups": {
+    "elliptical_volume": [
+      {
+        "feature_group": "elliptical_volume",
+        "feature_group_label_zh": "比例法椭圆切片体积",
+        "predictor_count": 1,
+        "model": "ols_loocv",
+        "validation_r": 0.6433868869741779,
+        "validation_r_squared_correlation": 0.41394668633032355,
+        "validation_predictive_r_squared": 0.4126889865262786,
+        "validation_rmse_kg": 52.65322198395513,
+        "validation_mae_kg": 39.71141969500138,
+        "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+      }
+    ],
+    "elliptical_volume_plus_median_depth": [
+      {
+        "feature_group": "elliptical_volume_plus_median_depth",
+        "feature_group_label_zh": "比例法椭圆切片体积+Rightview中位体深",
+        "predictor_count": 2,
+        "model": "ols_loocv",
+        "validation_r": 0.6507482830488351,
+        "validation_r_squared_correlation": 0.42347332789100683,
+        "validation_predictive_r_squared": 0.4192010877072787,
+        "validation_rmse_kg": 52.360498981250885,
+        "validation_mae_kg": 39.081256126640746,
+        "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+      }
+    ],
+    "elliptical_volume_plus_width11": [
+      {
+        "feature_group": "elliptical_volume_plus_width11",
+        "feature_group_label_zh": "比例法椭圆切片体积+W1-W11",
+        "predictor_count": 12,
+        "model": "ols_loocv",
+        "validation_r": 0.5132716269168454,
+        "validation_r_squared_correlation": 0.2634477629978653,
+        "validation_predictive_r_squared": 0.18513102140159965,
+        "validation_rmse_kg": 62.020429843809886,
+        "validation_mae_kg": 45.75392226989259,
+        "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+      },
+      {
+        "feature_group": "elliptical_volume_plus_width11",
+        "feature_group_label_zh": "比例法椭圆切片体积+W1-W11",
+        "predictor_count": 12,
+        "model": "ridge_nested_loocv",
+        "validation_r": 0.5661010673284861,
+        "validation_r_squared_correlation": 0.32047041843045115,
+        "validation_predictive_r_squared": 0.3198206746620814,
+        "validation_rmse_kg": 56.66339514694789,
+        "validation_mae_kg": 43.04942863400036,
+        "outer_selected_alpha_median": 39.81071705534978,
+        "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+      },
+      {
+        "feature_group": "elliptical_volume_plus_width11",
+        "feature_group_label_zh": "比例法椭圆切片体积+W1-W11",
+        "predictor_count": 12,
+        "model": "pls_nested_loocv",
+        "validation_r": 0.5154814178379746,
+        "validation_r_squared_correlation": 0.2657210921362486,
+        "validation_predictive_r_squared": 0.24910743088958498,
+        "validation_rmse_kg": 59.53601782400862,
+        "validation_mae_kg": 46.66750890657096,
+        "outer_selected_components_median": 2.0,
+        "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+      }
+    ],
+    "elliptical_volume_plus_height11": [
+      {
+        "feature_group": "elliptical_volume_plus_height11",
+        "feature_group_label_zh": "比例法椭圆切片体积+H1-H11",
+        "predictor_count": 12,
+        "model": "ols_loocv",
+        "validation_r": 0.5547658513726483,
+        "validation_r_squared_correlation": 0.3077651498492193,
+        "validation_predictive_r_squared": 0.25494761098430896,
+        "validation_rmse_kg": 59.30404070977852,
+        "validation_mae_kg": 47.082288036969004,
+        "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+      },
+      {
+        "feature_group": "elliptical_volume_plus_height11",
+        "feature_group_label_zh": "比例法椭圆切片体积+H1-H11",
+        "predictor_count": 12,
+        "model": "ridge_nested_loocv",
+        "validation_r": 0.5894593687309682,
+        "validation_r_squared_correlation": 0.3474623473847115,
+        "validation_predictive_r_squared": 0.3463920347402326,
+        "validation_rmse_kg": 55.54558530983651,
+        "validation_mae_kg": 42.08289519370673,
+        "outer_selected_alpha_median": 10.0,
+        "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+      },
+      {
+        "feature_group": "elliptical_volume_plus_height11",
+        "feature_group_label_zh": "比例法椭圆切片体积+H1-H11",
+        "predictor_count": 12,
+        "model": "pls_nested_loocv",
+        "validation_r": 0.5561471817076662,
+        "validation_r_squared_correlation": 0.3092996877213799,
+        "validation_predictive_r_squared": 0.29161184838042997,
+        "validation_rmse_kg": 57.82644896450295,
+        "validation_mae_kg": 43.73965644173238,
+        "outer_selected_components_median": 3.0,
+        "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+      }
+    ],
+    "elliptical_volume_plus_width11_height11": [
+      {
+        "feature_group": "elliptical_volume_plus_width11_height11",
+        "feature_group_label_zh": "比例法椭圆切片体积+W1-W11+H1-H11",
+        "predictor_count": 23,
+        "model": "ols_loocv",
+        "validation_r": 0.4808978826344063,
+        "validation_r_squared_correlation": 0.23126277352225522,
+        "validation_predictive_r_squared": 0.04933919004547671,
+        "validation_rmse_kg": 66.98902778329814,
+        "validation_mae_kg": 54.38734102803791,
+        "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+      },
+      {
+        "feature_group": "elliptical_volume_plus_width11_height11",
+        "feature_group_label_zh": "比例法椭圆切片体积+W1-W11+H1-H11",
+        "predictor_count": 23,
+        "model": "ridge_nested_loocv",
+        "validation_r": 0.5538444187718298,
+        "validation_r_squared_correlation": 0.30674364020470596,
+        "validation_predictive_r_squared": 0.30647062022376714,
+        "validation_rmse_kg": 57.21676656056209,
+        "validation_mae_kg": 43.99331257368177,
+        "outer_selected_alpha_median": 158.48931924611142,
+        "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+      },
+      {
+        "feature_group": "elliptical_volume_plus_width11_height11",
+        "feature_group_label_zh": "比例法椭圆切片体积+W1-W11+H1-H11",
+        "predictor_count": 23,
+        "model": "pls_nested_loocv",
+        "validation_r": 0.5600852387083464,
+        "validation_r_squared_correlation": 0.31369547461898534,
+        "validation_predictive_r_squared": 0.30950772105641633,
+        "validation_rmse_kg": 57.09134739395485,
+        "validation_mae_kg": 43.481695456867094,
+        "outer_selected_components_median": 1.0,
+        "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+      }
+    ]
+  },
+  "method_version": "proportional_elliptical_volume_plus_pca4548_11_profiles_nested_cv_v1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "method_version": "topview_back_high_band_centerline_v1.0",
+  "cattle_count": 61,
+  "scope": "existing PCA 45/48 core-torso longitudinal interval",
+  "longitudinal_step_m": 0.01,
+  "cross_section_slab_total_width_m": 0.02,
+  "lateral_bin_m": 0.01,
+  "height_band_definition": "contiguous lateral profile within 0.01 m below the smoothed maximum",
+  "height_band_center": "midpoint of the contiguous high-band segment containing the maximum",
+  "lateral_profile_smoothing_m": 0.05,
+  "longitudinal_centerline_smoothing_m": 0.09,
+  "line_interpretation": "computed center of the Topview high dorsal band; not an anatomical spine annotation",
+  "points_file": "cattle_3d_extraction_66/topview_back_high_band_centerline_61/back_high_band_centerline_points_61.csv",
+  "summary_file": "cattle_3d_extraction_66/topview_back_high_band_centerline_61/back_high_band_centerline_summary_61.csv",
+  "recorded_on": "2026-09-06"
+}

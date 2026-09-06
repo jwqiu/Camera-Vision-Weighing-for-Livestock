@@ -1,0 +1,338 @@
+{
+  "experiment": "top_right_fixed_rigid_endpoint_anchor_15train_5validation_v1.0",
+  "random_seed": 20260906,
+  "strict_cattle_count": 61,
+  "training_cow_ids": [
+    129,
+    13,
+    119,
+    120,
+    140,
+    128,
+    125,
+    132,
+    104,
+    76,
+    138,
+    144,
+    134,
+    124,
+    97
+  ],
+  "validation_cow_ids": [
+    102,
+    135,
+    141,
+    51,
+    114
+  ],
+  "top_to_right_matrix": [
+    [
+      -1.0,
+      0.0,
+      0.0,
+      0.18222692091751108
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0,
+      2.1397621739541695
+    ],
+    [
+      -0.0,
+      -1.0,
+      -0.0,
+      2.0091211106262206
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "matrix_scope": "preliminary fixed rigid transform; longitudinal boundary transfer is evaluated",
+  "validation_comparison_target": "independent within-cow full-body proportional boundary method",
+  "validation_mean_absolute_boundary_difference_m": 0.16222270869337807,
+  "validation_median_absolute_boundary_difference_m": 0.0790474913779951,
+  "validation_max_absolute_boundary_difference_m": 0.6165630241702753,
+  "validation_per_cow_mean_absolute_difference_m": [
+    0.11911065275041352,
+    0.06160450904784387,
+    0.03449457180258908,
+    0.5518429028696439,
+    0.04406090699639986
+  ],
+  "acceptance_rule": "exploratory pass only if mean <= 0.05 m and max <= 0.10 m",
+  "preliminary_pass": false,
+  "diagnostics": {
+    "unconstrained_longitudinal_scale": 1.1689601387269009,
+    "unconstrained_longitudinal_direction_rejected": [
+      -0.9642728965104963,
+      -0.26491089267007834
+    ],
+    "longitudinal_direction_constraint": "right_x = -top_x + tx (fixed opposing chute axes)",
+    "training_cow_midpoint_offset_samples": [
+      {
+        "cow_id": 129,
+        "offset_m": 0.2050749976744654
+      },
+      {
+        "cow_id": 13,
+        "offset_m": 0.437461919410705
+      },
+      {
+        "cow_id": 119,
+        "offset_m": 0.18222692091751108
+      },
+      {
+        "cow_id": 120,
+        "offset_m": 0.15356372811317423
+      },
+      {
+        "cow_id": 140,
+        "offset_m": 0.1797655359382624
+      },
+      {
+        "cow_id": 128,
+        "offset_m": 0.17757856349992757
+      },
+      {
+        "cow_id": 125,
+        "offset_m": 0.1456579334211352
+      },
+      {
+        "cow_id": 132,
+        "offset_m": 0.07553669812989217
+      },
+      {
+        "cow_id": 104,
+        "offset_m": 0.19944994049072287
+      },
+      {
+        "cow_id": 76,
+        "offset_m": 0.23423875752830497
+      },
+      {
+        "cow_id": 138,
+        "offset_m": 0.22302641228866593
+      },
+      {
+        "cow_id": 144,
+        "offset_m": 0.19218904520797736
+      },
+      {
+        "cow_id": 134,
+        "offset_m": 0.016523653132438643
+      },
+      {
+        "cow_id": 124,
+        "offset_m": 0.10941129711341852
+      },
+      {
+        "cow_id": 97,
+        "offset_m": 0.23689929330396636
+      }
+    ],
+    "training_anchor_rmse_m": 0.14247505928222717,
+    "training_anchor_median_absolute_error_m": 0.09799639111709557,
+    "training_anchor_residuals": [
+      {
+        "cow_id": 129,
+        "anchor": "rear",
+        "residual_m": 0.08651733508110071
+      },
+      {
+        "cow_id": 129,
+        "anchor": "head",
+        "residual_m": -0.040821181567192166
+      },
+      {
+        "cow_id": 13,
+        "anchor": "rear",
+        "residual_m": 0.37103755926132076
+      },
+      {
+        "cow_id": 13,
+        "anchor": "head",
+        "residual_m": 0.13943243772506708
+      },
+      {
+        "cow_id": 119,
+        "anchor": "rear",
+        "residual_m": 0.2057543653421403
+      },
+      {
+        "cow_id": 119,
+        "anchor": "head",
+        "residual_m": -0.2057543653421403
+      },
+      {
+        "cow_id": 120,
+        "anchor": "rear",
+        "residual_m": 0.09254022046470578
+      },
+      {
+        "cow_id": 120,
+        "anchor": "head",
+        "residual_m": -0.14986660607337954
+      },
+      {
+        "cow_id": 140,
+        "anchor": "rear",
+        "residual_m": 0.09999612621688736
+      },
+      {
+        "cow_id": 140,
+        "anchor": "head",
+        "residual_m": -0.10491889617538486
+      },
+      {
+        "cow_id": 128,
+        "anchor": "rear",
+        "residual_m": 0.06035423830890663
+      },
+      {
+        "cow_id": 128,
+        "anchor": "head",
+        "residual_m": -0.06965095314407366
+      },
+      {
+        "cow_id": 125,
+        "anchor": "rear",
+        "residual_m": 0.09599665601730378
+      },
+      {
+        "cow_id": 125,
+        "anchor": "head",
+        "residual_m": -0.16913463101005566
+      },
+      {
+        "cow_id": 132,
+        "anchor": "rear",
+        "residual_m": 0.00973431420087767
+      },
+      {
+        "cow_id": 132,
+        "anchor": "head",
+        "residual_m": -0.2231147597761156
+      },
+      {
+        "cow_id": 104,
+        "anchor": "rear",
+        "residual_m": 0.1211968994064333
+      },
+      {
+        "cow_id": 104,
+        "anchor": "head",
+        "residual_m": -0.08675086026000978
+      },
+      {
+        "cow_id": 76,
+        "anchor": "rear",
+        "residual_m": 0.18372815439033502
+      },
+      {
+        "cow_id": 76,
+        "anchor": "head",
+        "residual_m": -0.07970448116874729
+      },
+      {
+        "cow_id": 138,
+        "anchor": "rear",
+        "residual_m": 0.12540643275833152
+      },
+      {
+        "cow_id": 138,
+        "anchor": "head",
+        "residual_m": -0.04380745001602182
+      },
+      {
+        "cow_id": 144,
+        "anchor": "rear",
+        "residual_m": 0.09194595740509048
+      },
+      {
+        "cow_id": 144,
+        "anchor": "head",
+        "residual_m": -0.07202170882415793
+      },
+      {
+        "cow_id": 134,
+        "anchor": "rear",
+        "residual_m": -0.06937574161529553
+      },
+      {
+        "cow_id": 134,
+        "anchor": "head",
+        "residual_m": -0.2620307939548494
+      },
+      {
+        "cow_id": 124,
+        "anchor": "rear",
+        "residual_m": -0.02214187474823015
+      },
+      {
+        "cow_id": 124,
+        "anchor": "head",
+        "residual_m": -0.1234893728599551
+      },
+      {
+        "cow_id": 97,
+        "anchor": "rear",
+        "residual_m": 0.15718969552421536
+      },
+      {
+        "cow_id": 97,
+        "anchor": "head",
+        "residual_m": -0.04784495075130479
+      }
+    ],
+    "vertical_translation_samples_m": [
+      2.135638280693131,
+      2.1284528712696305,
+      2.1402100152659767,
+      2.141309310785181,
+      2.138775898999739,
+      2.1368042837284635,
+      2.1441030323566945,
+      2.145365381793493,
+      2.1462144056832897,
+      2.136534648105985,
+      2.1328526723321684,
+      2.1353472255385606,
+      2.149069005501221,
+      2.143990627963844,
+      2.1397621739541695
+    ],
+    "lateral_translation_samples_m": [
+      1.9564549904632569,
+      2.0594841640319825,
+      2.0057162002716065,
+      2.0534259923706055,
+      1.9456331220703125,
+      1.9474691010894776,
+      2.0091211106262206,
+      2.0094600867843626,
+      2.103251996185303,
+      2.020589038146973,
+      1.9106461001358033,
+      1.9874261811981202,
+      2.0779390286102295,
+      1.9640241411437989,
+      2.0367259923706054
+    ]
+  },
+  "outputs": {
+    "matrix_method_61": "rightview_core_boundaries_matrix_method_61.csv",
+    "proportional_method_61": "rightview_core_boundaries_proportional_method_61.csv",
+    "side_by_side_comparison_61": "rightview_core_boundaries_two_methods_comparison_61.csv",
+    "validation_qa": "validation_5_cows_combined.png"
+  },
+  "limitations": [
+    "No calibration target or author-supplied extrinsic matrix is available.",
+    "Differences are between two estimated methods, not errors against manually surveyed ground truth.",
+    "Neither method is promoted to the existing formal long_axis_records.csv in this experiment."
+  ]
+}

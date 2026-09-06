@@ -1,0 +1,8 @@
+﻿metric_field,metric_label_zh,outcome_field,n,pearson_r,spearman_rho,r_squared,loocv_r,loocv_rmse,loocv_mae,method_version
+three_view_simulated_girth_m,三视角模拟胸围,ground_truth_weight_kg,61,0.473448,0.54676,0.224153,0.416488,62.652714,50.630078,three_view_top_dorsal_plus_right_left_lower_arc_v2.0
+three_view_simulated_girth_m,三视角模拟胸围,ground_truth_heart_girth_cm,61,0.454896,0.544733,0.206931,0.389801,10.950939,8.921469,three_view_top_dorsal_plus_right_left_lower_arc_v2.0
+right_plus_left_full_visible_arc_m,左右侧完整可见半弧之和,ground_truth_weight_kg,61,0.298355,0.360619,0.089016,0.194575,67.872986,54.572078,three_view_top_dorsal_plus_right_left_lower_arc_v2.0
+right_plus_left_full_visible_arc_m,左右侧完整可见半弧之和,ground_truth_heart_girth_cm,61,0.263235,0.33362,0.069292,0.145255,11.823261,9.670939,three_view_top_dorsal_plus_right_left_lower_arc_v2.0
+topview_dorsal_arc_m,Topview胸区上背弧,ground_truth_weight_kg,61,0.544352,0.580767,0.296319,0.499911,59.652911,47.250527,three_view_top_dorsal_plus_right_left_lower_arc_v2.0
+topview_dorsal_arc_m,Topview胸区上背弧,ground_truth_heart_girth_cm,61,0.565927,0.637149,0.320273,0.510157,10.233508,7.933422,three_view_top_dorsal_plus_right_left_lower_arc_v2.0
+ground_truth_heart_girth_cm,真实胸围,ground_truth_weight_kg,61,0.933296,0.912959,0.871042,0.928755,25.470957,19.211905,three_view_top_dorsal_plus_right_left_lower_arc_v2.0

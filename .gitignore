@@ -1,0 +1,32 @@
+.DS_Store
+
+# Raw and binary cattle data (kept locally; not suitable for normal GitHub storage)
+dataset/**
+!dataset/README.md
+*.ply
+*.png
+*.jpg
+*.jpeg
+*.xlsx
+*.xls
+*.ndjson
+
+# Python and local tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Node dependencies and local environment files
+node_modules/
+.env
+.env.*
+
+# Editor and temporary files
+.idea/
+.vscode/
+*.swp
+*.tmp
+*~

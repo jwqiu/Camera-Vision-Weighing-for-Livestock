@@ -1,0 +1,20 @@
+{
+  "n": 61,
+  "population": "61 cattle with strict PCA rear45/head48 inclusion; PCA is used only for sample inclusion and comparison",
+  "measurement_axis": "rear-extended curved skeleton centerline",
+  "width_definition": "local cross-section perpendicular to skeleton tangent; 1cm slab; 1st-to-99th percentile contiguous width; 3cm rolling-median width profile",
+  "maximum_search_region": {
+    "rear_exclusion_m": 0.05,
+    "head_exclusion_m": 0.25
+  },
+  "method_version": "extended_geometric_local_cross_section_width_v1.0",
+  "mean_skeleton_max_width_m": 0.6036528360655737,
+  "mean_pca_max_width_m": 0.5836297704918032,
+  "mean_skeleton_minus_pca_m": 0.02002306557377049,
+  "mean_absolute_difference_m": 0.02002306557377049,
+  "maximum_absolute_difference_m": 0.04294500000000001,
+  "pearson_skeleton_vs_pca": 0.9767691253806122,
+  "pearson_skeleton_width_vs_weight": 0.4063349443451811,
+  "pearson_pca_width_vs_weight": 0.42103924167258056,
+  "review_required_cows": []
+}

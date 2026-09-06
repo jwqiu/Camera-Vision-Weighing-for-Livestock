@@ -1,0 +1,38 @@
+{
+  "cattle_count": 61,
+  "definition": "apply the same ordered three-rule boundary detector independently to upper and lower PCA half-width profiles; rule 2 includes an increase-flat-increase plateau supplement",
+  "marker": "70% of full PCA long-axis length measured from rear toward head",
+  "display_orientation": "rear left; head right",
+  "search_ratio_range": [
+    0.45,
+    0.7
+  ],
+  "rule3_support_ratio_range": [
+    0.35,
+    0.45
+  ],
+  "upper_rule1_u_shaped_valley_count": 52,
+  "upper_rule1_broad_u_supplement_count": 1,
+  "upper_rule2_slope_acceleration_count": 7,
+  "upper_rule3_post_peak_valley_count": 2,
+  "upper_no_rule_match_count": 0,
+  "lower_rule1_u_shaped_valley_count": 57,
+  "lower_rule2_slope_acceleration_count": 4,
+  "lower_rule2_plateau_supplement_count": 1,
+  "lower_rule3_post_peak_valley_count": 0,
+  "lower_no_rule_match_count": 0,
+  "mean_selected_upper_halfwidth_m": 0.21209848446991095,
+  "mean_selected_lower_halfwidth_m": 0.20770168372281966,
+  "group_count": 7,
+  "group_files": [
+    "cattle_3d_extraction_66/pca_horizontal_60pct_upper_halfwidth_preview_61/groups_2cols_10cows/pca_upper_lower_three_rule_group_01_cows_001_023.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_upper_halfwidth_preview_61/groups_2cols_10cows/pca_upper_lower_three_rule_group_02_cows_024_082.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_upper_halfwidth_preview_61/groups_2cols_10cows/pca_upper_lower_three_rule_group_03_cows_087_107.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_upper_halfwidth_preview_61/groups_2cols_10cows/pca_upper_lower_three_rule_group_04_cows_110_124.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_upper_halfwidth_preview_61/groups_2cols_10cows/pca_upper_lower_three_rule_group_05_cows_125_135.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_upper_halfwidth_preview_61/groups_2cols_10cows/pca_upper_lower_three_rule_group_06_cows_136_151.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_upper_halfwidth_preview_61/groups_2cols_10cows/pca_upper_lower_three_rule_group_07_cows_154_154.png"
+  ],
+  "records": "cattle_3d_extraction_66/pca_horizontal_60pct_upper_halfwidth_preview_61/pca_upper_halfwidth_records_61.csv",
+  "method_version": "pca_upper_lower_three_rule_with_plateau_supplement_v7.0"
+}

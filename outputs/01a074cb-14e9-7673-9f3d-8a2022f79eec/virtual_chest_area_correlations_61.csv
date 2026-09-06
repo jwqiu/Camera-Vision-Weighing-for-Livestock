@@ -1,0 +1,6 @@
+﻿metric_field,metric_label_zh,unit,n,pearson_r,pearson_ci95_low,pearson_ci95_high,spearman_rho,r_squared,slope,intercept,in_sample_rmse_kg,in_sample_mae_kg,loocv_r,loocv_rmse_kg,loocv_mae_kg,method_version
+virtual_chest_width_m,虚拟胸宽,m,61,0.564919,0.365022,0.715024,0.63109,0.319134,1241.383121,-68.968909,56.692002,42.997835,0.522837,58.690253,44.568502,dual_valley_virtual_width_rightview_chest_depth_v1.0
+rightview_chest_depth_m,Rightview胸区体深,m,61,0.217224,-0.036604,0.444722,0.328469,0.047186,211.448207,322.279273,67.064839,53.725839,0.078511,69.277607,55.556182,dual_valley_virtual_width_rightview_chest_depth_v1.0
+ellipse_chest_area_m2,椭圆胸截面积,m²,61,0.467394,0.244327,0.643481,0.521347,0.218457,1112.203009,226.689979,60.73894,47.697001,0.411223,62.790314,49.33673,dual_valley_virtual_width_rightview_chest_depth_v1.0
+ellipse_area_times_torso_length_m3,椭圆胸截面积×躯干长度,m³,61,0.576366,0.379643,0.72322,0.603165,0.332197,717.554101,249.731057,56.145494,43.569646,0.537292,58.038003,45.041419,dual_valley_virtual_width_rightview_chest_depth_v1.0
+ground_truth_heart_girth_cm,人工胸围,cm,61,0.933296,0.890844,0.959591,0.912959,0.871042,5.411804,-536.776668,24.672592,18.592945,0.928755,25.470957,19.211905,dual_valley_virtual_width_rightview_chest_depth_v1.0

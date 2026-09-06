@@ -1,0 +1,38 @@
+{
+  "method_version": "pca_width_head60_5cm_rear65_3cm_immediate50_trapezoid_v1.0",
+  "population_definition": "61 cattle with strict PCA 45/48 boundaries in long_axis_records.csv",
+  "rule": {
+    "head": "from maximum width toward head: 5 consecutive 1cm sections below 60%",
+    "rear": "from maximum width toward rear: 3 consecutive 1cm sections below 65%",
+    "either_side": "stop immediately at one section below 50%",
+    "area": "trapezoidal integral of smoothed top-view width profile between boundaries"
+  },
+  "evaluated_count": 61,
+  "suitable_count": 61,
+  "unsuitable_cow_ids": [],
+  "projected_area_vs_weight": {
+    "n": 61,
+    "pearson_r": 0.6356129098019488,
+    "spearman_rho": 0.6695402726201594,
+    "in_sample_r_squared": 0.40400377110690044,
+    "loocv_rmse_kg": 54.945893755761375,
+    "loocv_mae_kg": 40.502165468434036,
+    "linear_intercept_kg": 108.97761784747091,
+    "linear_slope_kg_per_m2": 579.6158983785625
+  },
+  "heart_girth_vs_weight_same_suitable_population": {
+    "n": 61,
+    "pearson_r": 0.9332963898567809,
+    "spearman_rho": 0.9129591824999127,
+    "in_sample_r_squared": 0.8710421513197005,
+    "loocv_rmse_kg": 25.470956780469756,
+    "loocv_mae_kg": 19.211904994480726,
+    "linear_intercept_kg": -536.7766677131356,
+    "linear_slope_kg_per_m2": 5.41180377953721
+  },
+  "projected_area_distribution_m2": {
+    "mean": 0.5920926557377049,
+    "minimum": 0.373512,
+    "maximum": 0.721485
+  }
+}

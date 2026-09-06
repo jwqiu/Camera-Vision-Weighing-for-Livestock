@@ -1,0 +1,152 @@
+{
+  "random_seed": 20260906,
+  "sampled_cow_ids": [
+    39,
+    50,
+    82,
+    100,
+    107,
+    111,
+    126,
+    128,
+    129,
+    132
+  ],
+  "methods": {
+    "pca": "PCA 45/48 core maximum-width station; 2nd-to-98th percentile local width; 3cm smoothing",
+    "skeleton": "local normal to rear-extended curved skeleton; contiguous 1st-to-99th percentile width; 3cm smoothing",
+    "inscribed_circle": "largest 1cm-grid circle inside the PCA 45/48 core Topview occupancy mask after 1-cell closing and hole filling"
+  },
+  "records": [
+    {
+      "random_seed": 20260906,
+      "cow_id": 39,
+      "pca_max_width_m": 0.58566,
+      "pca_max_width_station_m": -0.11,
+      "skeleton_max_width_m": 0.628605,
+      "skeleton_max_width_station_from_rear_m": 0.7,
+      "max_inscribed_circle_diameter_m": 0.6260990336999411,
+      "max_inscribed_circle_radius_m": 0.31304951684997057,
+      "max_inscribed_circle_center_x_m": 0.28441496993354565,
+      "max_inscribed_circle_center_y_m": -0.17362663130588418,
+      "max_inscribed_circle_grid_m": 0.01
+    },
+    {
+      "random_seed": 20260906,
+      "cow_id": 50,
+      "pca_max_width_m": 0.594746,
+      "pca_max_width_station_m": -0.22,
+      "skeleton_max_width_m": 0.63643,
+      "skeleton_max_width_station_from_rear_m": 0.67,
+      "max_inscribed_circle_diameter_m": 0.6356099432828282,
+      "max_inscribed_circle_radius_m": 0.3178049716414141,
+      "max_inscribed_circle_center_x_m": 0.3121980218874094,
+      "max_inscribed_circle_center_y_m": -0.10097309247214091,
+      "max_inscribed_circle_grid_m": 0.01
+    },
+    {
+      "random_seed": 20260906,
+      "cow_id": 82,
+      "pca_max_width_m": 0.586443,
+      "pca_max_width_station_m": -0.14,
+      "skeleton_max_width_m": 0.601244,
+      "skeleton_max_width_station_from_rear_m": 0.67,
+      "max_inscribed_circle_diameter_m": 0.620322496770833,
+      "max_inscribed_circle_radius_m": 0.3101612483854165,
+      "max_inscribed_circle_center_x_m": 0.27932275850962224,
+      "max_inscribed_circle_center_y_m": 0.08196852072154166,
+      "max_inscribed_circle_grid_m": 0.01
+    },
+    {
+      "random_seed": 20260906,
+      "cow_id": 100,
+      "pca_max_width_m": 0.552033,
+      "pca_max_width_station_m": -0.19,
+      "skeleton_max_width_m": 0.571313,
+      "skeleton_max_width_station_from_rear_m": 0.64,
+      "max_inscribed_circle_diameter_m": 0.5813776741499453,
+      "max_inscribed_circle_radius_m": 0.2906888370749727,
+      "max_inscribed_circle_center_x_m": 0.18554246434035063,
+      "max_inscribed_circle_center_y_m": 0.42295219451424226,
+      "max_inscribed_circle_grid_m": 0.01
+    },
+    {
+      "random_seed": 20260906,
+      "cow_id": 107,
+      "pca_max_width_m": 0.574904,
+      "pca_max_width_station_m": -0.19,
+      "skeleton_max_width_m": 0.586516,
+      "skeleton_max_width_station_from_rear_m": 0.61,
+      "max_inscribed_circle_diameter_m": 0.6013318551349164,
+      "max_inscribed_circle_radius_m": 0.3006659275674582,
+      "max_inscribed_circle_center_x_m": 0.05165376508216166,
+      "max_inscribed_circle_center_y_m": -0.08021577049902652,
+      "max_inscribed_circle_grid_m": 0.01
+    },
+    {
+      "random_seed": 20260906,
+      "cow_id": 111,
+      "pca_max_width_m": 0.59505,
+      "pca_max_width_station_m": -0.17,
+      "skeleton_max_width_m": 0.608863,
+      "skeleton_max_width_station_from_rear_m": 0.68,
+      "max_inscribed_circle_diameter_m": 0.6212889826803627,
+      "max_inscribed_circle_radius_m": 0.31064449134018135,
+      "max_inscribed_circle_center_x_m": 0.24098166519782388,
+      "max_inscribed_circle_center_y_m": 0.11379839181798346,
+      "max_inscribed_circle_grid_m": 0.01
+    },
+    {
+      "random_seed": 20260906,
+      "cow_id": 126,
+      "pca_max_width_m": 0.605144,
+      "pca_max_width_station_m": -0.16,
+      "skeleton_max_width_m": 0.625106,
+      "skeleton_max_width_station_from_rear_m": 0.73,
+      "max_inscribed_circle_diameter_m": 0.6403124237432849,
+      "max_inscribed_circle_radius_m": 0.32015621187164245,
+      "max_inscribed_circle_center_x_m": -0.17656846810762236,
+      "max_inscribed_circle_center_y_m": 0.3115330240678112,
+      "max_inscribed_circle_grid_m": 0.01
+    },
+    {
+      "random_seed": 20260906,
+      "cow_id": 128,
+      "pca_max_width_m": 0.557056,
+      "pca_max_width_station_m": -0.19,
+      "skeleton_max_width_m": 0.573713,
+      "skeleton_max_width_station_from_rear_m": 0.74,
+      "max_inscribed_circle_diameter_m": 0.5922837157984339,
+      "max_inscribed_circle_radius_m": 0.29614185789921693,
+      "max_inscribed_circle_center_x_m": -0.10617156708388709,
+      "max_inscribed_circle_center_y_m": 0.12798330663782465,
+      "max_inscribed_circle_grid_m": 0.01
+    },
+    {
+      "random_seed": 20260906,
+      "cow_id": 129,
+      "pca_max_width_m": 0.631709,
+      "pca_max_width_station_m": -0.19,
+      "skeleton_max_width_m": 0.650674,
+      "skeleton_max_width_station_from_rear_m": 0.71,
+      "max_inscribed_circle_diameter_m": 0.657875368135941,
+      "max_inscribed_circle_radius_m": 0.3289376840679705,
+      "max_inscribed_circle_center_x_m": 0.0639973234527232,
+      "max_inscribed_circle_center_y_m": -0.003384403969394283,
+      "max_inscribed_circle_grid_m": 0.01
+    },
+    {
+      "random_seed": 20260906,
+      "cow_id": 132,
+      "pca_max_width_m": 0.571458,
+      "pca_max_width_station_m": -0.11,
+      "skeleton_max_width_m": 0.592912,
+      "skeleton_max_width_station_from_rear_m": 0.8,
+      "max_inscribed_circle_diameter_m": 0.6118823416311342,
+      "max_inscribed_circle_radius_m": 0.3059411708155671,
+      "max_inscribed_circle_center_x_m": 0.15521430757716698,
+      "max_inscribed_circle_center_y_m": 0.16020273924682552,
+      "max_inscribed_circle_grid_m": 0.01
+    }
+  ]
+}

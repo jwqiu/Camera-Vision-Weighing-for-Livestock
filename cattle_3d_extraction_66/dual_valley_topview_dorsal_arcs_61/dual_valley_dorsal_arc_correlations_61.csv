@@ -1,0 +1,7 @@
+﻿metric_field,metric_label_zh,outcome_field,n,pearson_r,spearman_rho,r_squared,loocv_r,loocv_rmse,loocv_mae,method_version
+method1_separate_valley_half_arcs_ridge_m,方法1：两侧凹点半弧相加（高位带中心线）,ground_truth_heart_girth_cm,61,0.533005,0.583637,0.284094,0.484577,10.38789,8.162563,dual_valley_topview_dorsal_arc_v1.0
+method1_separate_valley_half_arcs_ridge_m,方法1：两侧凹点半弧相加（高位带中心线）,ground_truth_weight_kg,61,0.547562,0.596925,0.299825,0.509214,59.221212,46.426261,dual_valley_topview_dorsal_arc_v1.0
+method1_separate_valley_half_arcs_pca_m,方法1：两侧凹点半弧相加（PCA线）,ground_truth_heart_girth_cm,61,0.505067,0.524911,0.255093,0.454506,10.576164,8.375324,dual_valley_topview_dorsal_arc_v1.0
+method1_separate_valley_half_arcs_pca_m,方法1：两侧凹点半弧相加（PCA线）,ground_truth_weight_kg,61,0.516712,0.535495,0.266992,0.475354,60.538437,47.663951,dual_valley_topview_dorsal_arc_v1.0
+method2_midpoint_full_arc_m,方法2：两凹点中间位置完整背弧,ground_truth_heart_girth_cm,61,0.565927,0.637149,0.320273,0.510157,10.233508,7.933422,dual_valley_topview_dorsal_arc_v1.0
+method2_midpoint_full_arc_m,方法2：两凹点中间位置完整背弧,ground_truth_weight_kg,61,0.544352,0.580767,0.296319,0.499911,59.652911,47.250527,dual_valley_topview_dorsal_arc_v1.0

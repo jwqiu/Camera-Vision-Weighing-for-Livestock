@@ -1,0 +1,35 @@
+{
+  "method": "top_width_right_depth_elliptical_slices_1cm_v1.0",
+  "cattle_count_per_method": 61,
+  "slice_grid_m": 0.01,
+  "cross_section": "ellipse",
+  "top_measurement": "PCA-axis smoothed width profile within accepted rear45/head48 core",
+  "right_measurement": "corrected back-to-belly depth profile; legs and udder suppressed",
+  "methods": {
+    "matrix": {
+      "boundary_source": "cattle_3d_extraction_66/top_right_transform_experiment_15x5/rightview_core_boundaries_matrix_method_61.csv",
+      "volume_min_m3": 0.1691914324922288,
+      "volume_median_m3": 0.2998133161734553,
+      "volume_mean_m3": 0.30324225967946744,
+      "volume_max_m3": 0.3958818333448415,
+      "ok_count": 54,
+      "review_required_count": 7
+    },
+    "proportional": {
+      "boundary_source": "cattle_3d_extraction_66/top_right_transform_experiment_15x5/rightview_core_boundaries_proportional_method_61.csv",
+      "volume_min_m3": 0.17327418999362174,
+      "volume_median_m3": 0.2951805249955506,
+      "volume_mean_m3": 0.30176757107505964,
+      "volume_max_m3": 0.38793434146119865,
+      "ok_count": 47,
+      "review_required_count": 14
+    }
+  },
+  "comparison": {
+    "mean_matrix_minus_proportional_m3": 0.0014746886044078647,
+    "median_matrix_minus_proportional_m3": 0.0019761276568062147,
+    "mean_absolute_difference_m3": 0.004595630002985949,
+    "max_absolute_difference_m3": 0.0203647088173729
+  },
+  "interpretation": "Experimental core-torso volumes, not whole-animal anatomical volumes and not ground-truth validated."
+}

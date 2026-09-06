@@ -1,0 +1,622 @@
+{
+  "method_version": "qa_image_medial_axis_v1.0",
+  "source": "existing PCA QA height-map PNG files",
+  "pca_image_policy": "reused unchanged on left side",
+  "mask": "color segmentation, morphological closing, largest component, hole filling",
+  "centerline": "Zhang-Suen skeletonization, short-branch pruning, graph-diameter path, constrained smoothing",
+  "comparison_layout": "one cow per row; PCA left, skeleton right; 10 cows per combined image",
+  "records": [
+    {
+      "cow_id": 1,
+      "skeleton_pixels": 352,
+      "centerline_points": 107,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_001_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_001_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 2,
+      "skeleton_pixels": 349,
+      "centerline_points": 98,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_002_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_002_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 4,
+      "skeleton_pixels": 299,
+      "centerline_points": 95,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_004_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_004_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 5,
+      "skeleton_pixels": 319,
+      "centerline_points": 100,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_005_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_005_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 6,
+      "skeleton_pixels": 402,
+      "centerline_points": 106,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_006_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_006_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 13,
+      "skeleton_pixels": 298,
+      "centerline_points": 91,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_013_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_013_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 16,
+      "skeleton_pixels": 260,
+      "centerline_points": 84,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_016_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_016_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 19,
+      "skeleton_pixels": 223,
+      "centerline_points": 70,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_019_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_019_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 20,
+      "skeleton_pixels": 354,
+      "centerline_points": 109,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_020_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_020_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 21,
+      "skeleton_pixels": 351,
+      "centerline_points": 107,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_021_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_021_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 22,
+      "skeleton_pixels": 332,
+      "centerline_points": 109,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_022_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_022_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 23,
+      "skeleton_pixels": 287,
+      "centerline_points": 91,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_023_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_023_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 24,
+      "skeleton_pixels": 372,
+      "centerline_points": 114,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_024_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_024_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 25,
+      "skeleton_pixels": 340,
+      "centerline_points": 105,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_025_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_025_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 26,
+      "skeleton_pixels": 383,
+      "centerline_points": 116,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_026_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_026_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 27,
+      "skeleton_pixels": 343,
+      "centerline_points": 108,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_027_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_027_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 28,
+      "skeleton_pixels": 308,
+      "centerline_points": 98,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_028_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_028_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 39,
+      "skeleton_pixels": 332,
+      "centerline_points": 107,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_039_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_039_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 50,
+      "skeleton_pixels": 313,
+      "centerline_points": 94,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_050_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_050_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 51,
+      "skeleton_pixels": 338,
+      "centerline_points": 109,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_051_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_051_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 76,
+      "skeleton_pixels": 301,
+      "centerline_points": 90,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_076_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_076_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 82,
+      "skeleton_pixels": 216,
+      "centerline_points": 72,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_082_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_082_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 87,
+      "skeleton_pixels": 318,
+      "centerline_points": 101,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_087_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_087_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 97,
+      "skeleton_pixels": 299,
+      "centerline_points": 96,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_097_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_097_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 98,
+      "skeleton_pixels": 244,
+      "centerline_points": 80,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_098_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_098_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 99,
+      "skeleton_pixels": 372,
+      "centerline_points": 113,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_099_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_099_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 100,
+      "skeleton_pixels": 318,
+      "centerline_points": 101,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_100_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_100_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 102,
+      "skeleton_pixels": 410,
+      "centerline_points": 107,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_102_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_102_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 103,
+      "skeleton_pixels": 334,
+      "centerline_points": 102,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_103_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_103_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 104,
+      "skeleton_pixels": 261,
+      "centerline_points": 86,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_104_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_104_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 105,
+      "skeleton_pixels": 249,
+      "centerline_points": 81,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_105_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_105_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 107,
+      "skeleton_pixels": 358,
+      "centerline_points": 102,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_107_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_107_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 110,
+      "skeleton_pixels": 293,
+      "centerline_points": 91,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_110_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_110_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 111,
+      "skeleton_pixels": 319,
+      "centerline_points": 89,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_111_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_111_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 112,
+      "skeleton_pixels": 410,
+      "centerline_points": 115,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_112_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_112_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 114,
+      "skeleton_pixels": 414,
+      "centerline_points": 116,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_114_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_114_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 115,
+      "skeleton_pixels": 347,
+      "centerline_points": 104,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_115_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_115_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 117,
+      "skeleton_pixels": 327,
+      "centerline_points": 109,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_117_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_117_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 119,
+      "skeleton_pixels": 383,
+      "centerline_points": 112,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_119_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_119_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 120,
+      "skeleton_pixels": 369,
+      "centerline_points": 113,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_120_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_120_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 122,
+      "skeleton_pixels": 406,
+      "centerline_points": 127,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_122_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_122_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 123,
+      "skeleton_pixels": 406,
+      "centerline_points": 125,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_123_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_123_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 124,
+      "skeleton_pixels": 424,
+      "centerline_points": 120,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_124_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_124_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 125,
+      "skeleton_pixels": 431,
+      "centerline_points": 126,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_125_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_125_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 126,
+      "skeleton_pixels": 424,
+      "centerline_points": 117,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_126_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_126_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 127,
+      "skeleton_pixels": 405,
+      "centerline_points": 125,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_127_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_127_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 128,
+      "skeleton_pixels": 395,
+      "centerline_points": 112,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_128_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_128_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 129,
+      "skeleton_pixels": 425,
+      "centerline_points": 120,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_129_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_129_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 130,
+      "skeleton_pixels": 418,
+      "centerline_points": 120,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_130_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_130_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 132,
+      "skeleton_pixels": 372,
+      "centerline_points": 118,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_132_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_132_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 133,
+      "skeleton_pixels": 344,
+      "centerline_points": 101,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_133_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_133_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 134,
+      "skeleton_pixels": 331,
+      "centerline_points": 107,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_134_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_134_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 135,
+      "skeleton_pixels": 413,
+      "centerline_points": 116,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_135_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_135_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 136,
+      "skeleton_pixels": 345,
+      "centerline_points": 111,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_136_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_136_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 137,
+      "skeleton_pixels": 334,
+      "centerline_points": 106,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_137_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_137_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 138,
+      "skeleton_pixels": 456,
+      "centerline_points": 131,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_138_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_138_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 139,
+      "skeleton_pixels": 329,
+      "centerline_points": 104,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_139_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_139_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 140,
+      "skeleton_pixels": 397,
+      "centerline_points": 125,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_140_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_140_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 141,
+      "skeleton_pixels": 364,
+      "centerline_points": 111,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_141_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_141_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 142,
+      "skeleton_pixels": 330,
+      "centerline_points": 104,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_142_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_142_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 144,
+      "skeleton_pixels": 411,
+      "centerline_points": 119,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_144_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_144_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 147,
+      "skeleton_pixels": 370,
+      "centerline_points": 119,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_147_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_147_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 149,
+      "skeleton_pixels": 339,
+      "centerline_points": 107,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_149_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_149_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 150,
+      "skeleton_pixels": 393,
+      "centerline_points": 120,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_150_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_150_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 151,
+      "skeleton_pixels": 348,
+      "centerline_points": 111,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_151_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_151_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    },
+    {
+      "cow_id": 154,
+      "skeleton_pixels": 402,
+      "centerline_points": 124,
+      "skeleton_image": "cattle_3d_extraction_66/skeleton_axis_comparison/skeleton_individual/cow_154_skeleton_centerline.png",
+      "comparison_image": "cattle_3d_extraction_66/skeleton_axis_comparison/individual_comparisons/cow_154_pca_vs_skeleton.png",
+      "centerline_coordinates_recorded": true,
+      "centerline_points_file": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv"
+    }
+  ],
+  "coordinate_records": {
+    "record_version": "qa_rendered_geometric_centerline_record_v1.0",
+    "summary_csv": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_records.csv",
+    "points_csv": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_points.csv",
+    "records_json": "cattle_3d_extraction_66/skeleton_axis_comparison/geometric_centerline_records.json",
+    "coordinate_system": "overlay_image_pixel_top_left_origin_x_right_y_down",
+    "pca_records_policy": "preserved separately in cattle_3d_extraction_66/long_axis_records.csv"
+  },
+  "extended_coordinate_records": {
+    "record_version": "geometric_centerline_rear_extended_v1.0",
+    "summary_csv": "cattle_3d_extraction_66/skeleton_axis_comparison/extended_geometric_centerline_records.csv",
+    "points_csv": "cattle_3d_extraction_66/skeleton_axis_comparison/extended_geometric_centerline_points.csv",
+    "records_json": "cattle_3d_extraction_66/skeleton_axis_comparison/extended_geometric_centerline_records.json",
+    "image_coordinate_system": "overlay_image_pixel_top_left_origin_x_right_y_down",
+    "physical_coordinate_system": "camera_point_cloud_xyz_m",
+    "orientation": "rear_to_head",
+    "record_policy": "PCA axis and original unextended skeleton centerline records are preserved separately."
+  }
+}

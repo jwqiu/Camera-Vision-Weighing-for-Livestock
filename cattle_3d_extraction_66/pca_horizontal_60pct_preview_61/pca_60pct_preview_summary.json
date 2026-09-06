@@ -1,0 +1,19 @@
+{
+  "cattle_count": 61,
+  "group_size": 10,
+  "columns_per_group": 2,
+  "group_count": 7,
+  "orientation": "PCA full long axis horizontal; rear left; head right",
+  "marker": "60% of full PCA long-axis length measured from rear toward head",
+  "group_files": [
+    "cattle_3d_extraction_66/pca_horizontal_60pct_preview_61/groups_2cols_10cows/pca_horizontal_60pct_group_01_cows_001_023.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_preview_61/groups_2cols_10cows/pca_horizontal_60pct_group_02_cows_024_082.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_preview_61/groups_2cols_10cows/pca_horizontal_60pct_group_03_cows_087_107.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_preview_61/groups_2cols_10cows/pca_horizontal_60pct_group_04_cows_110_124.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_preview_61/groups_2cols_10cows/pca_horizontal_60pct_group_05_cows_125_135.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_preview_61/groups_2cols_10cows/pca_horizontal_60pct_group_06_cows_136_151.png",
+    "cattle_3d_extraction_66/pca_horizontal_60pct_preview_61/groups_2cols_10cows/pca_horizontal_60pct_group_07_cows_154_154.png"
+  ],
+  "position_record": "cattle_3d_extraction_66/pca_horizontal_60pct_preview_61/pca_60pct_positions_61.csv",
+  "method_version": "pca_full_axis_rear60pct_preview_v1.0"
+}
