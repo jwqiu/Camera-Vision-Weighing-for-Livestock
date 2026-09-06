@@ -32,24 +32,50 @@ Each selected record contains:
 
 ## 2. Method
 
+Depth data from the Topview and Rightview cameras are first converted into 3D point clouds. These point clouds allow measurable cattle body dimensions—such as torso length, width, depth, projected area and estimated volume—to be extracted without direct physical contact.
+
+These geometric measurements are then compared with the ground-truth live weights to identify features associated with body weight. Regression models use the selected features to estimate live weight. Therefore, reliable point-cloud processing and accurate calculation of body dimensions are central to the overall prediction workflow.
+
 ```text
-Depth point clouds
+Topview and Rightview depth data
+→ 3D point-cloud generation
 → Ground removal and cattle segmentation
 → PCA body-axis alignment
-→ Core torso detection
-→ Geometric feature extraction
-→ Weight prediction
+→ Core torso localization
+→ Body-dimension and geometric-feature extraction
+→ Correlation analysis and feature selection
+→ Live-weight prediction
+→ Leave-one-out cross-validation
 ```
 
-The main feature is an estimated torso volume. The torso is divided into approximately 1 cm slices. Each slice is treated as an ellipse using its Topview width and corresponding Rightview depth.
+### 2.1 Point-cloud Processing
+
+The raw point clouds contain the cattle together with the floor, fences and other surrounding structures. Ground removal and cattle segmentation are applied to isolate the animal. The segmented body is then aligned along its principal axis using principal component analysis (PCA), providing a consistent coordinate system for geometric measurement.
+
+### 2.2 Body-dimension Extraction
+
+After alignment, the core torso region is identified to reduce the influence of the head, neck, legs and tail. Geometric measurements are extracted from the Topview and Rightview point clouds, including:
+
+- Torso length
+- Topview body width
+- Rightview body depth
+- Projected body area
+- Local body widths and depths
+- Estimated torso volume
+
+The main three-dimensional feature is the estimated torso volume. The torso is divided into approximately 1 cm slices, and each slice is approximated as an ellipse using its Topview width and corresponding Rightview depth.
 
 $$
 V = \sum_i \frac{\pi}{4} W_i D_i \Delta x
 $$
 
-Here, $W_i$ is body width, $D_i$ is body depth and $\Delta x$ is the slice thickness.
+Here, $W_i$ is the Topview body width, $D_i$ is the corresponding Rightview body depth and $\Delta x$ is the slice thickness.
 
-The project also evaluates projected area, projected volume, torso length, local body widths and local body heights. All prediction results are evaluated using leave-one-out cross-validation.
+### 2.3 Weight Prediction and Evaluation
+
+The extracted dimensions and geometric features are assessed according to their relationships with measured live weight. Individual features and selected feature combinations are then used to construct regression models for live-weight estimation.
+
+Prediction performance is evaluated using leave-one-out cross-validation, so each animal is predicted by a model trained on all remaining animals.
 
 ## 3. Results
 
