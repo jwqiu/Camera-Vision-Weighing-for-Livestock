@@ -1,30 +1,93 @@
 # Camera Vision Weighing for Livestock
 
-Research code and derived measurements for estimating cattle body weight from multi-view depth-camera point clouds.
+This project estimates cattle live weight from Topview and Rightview depth point clouds. It uses automatic point-cloud processing and geometric body measurements instead of manual feature annotation.
 
-## Current analysis
+## 1. Dataset
 
-The project extracts geometric measurements from top-view and right-view cattle point clouds, including:
+### 1.1 Data Source
 
-- PCA-aligned body and torso regions
-- projected torso area and projected volume
-- longitudinal width and height profiles
-- ellipse-slice torso volume using top-view width and right-view depth
-- virtual chest width and local rump measurements
-- linear-regression evaluation with leave-one-out cross-validation
+This project uses the public CowDB dataset published by Ruchay et al. (2020).
 
-The main analysis scripts are in `tools/`. Compact derived CSV and JSON results are retained in `cattle_3d_extraction_66/` and `outputs/`.
+The dataset contains RGB-D images, multi-view point clouds, manual body measurements and live weights for 154 Hereford cattle.
 
-## Data
+**Dataset paper:**  
+Alexey Ruchay et al. “Accurate body measurement of live cattle using three depth cameras and non-rigid 3-D shape recovery.” *Computers and Electronics in Agriculture*, 179, 105821.
 
-The raw CowDB data, point clouds, images, spreadsheets, and generated previews are intentionally excluded from this repository because of their size. See `dataset/README.md` for the dataset citation and measurement definitions.
+https://doi.org/10.1016/j.compag.2020.105821
 
-## Reproducing the latest comparison
+### 1.2 Data Used in This Project
 
-Run:
+The original 154 cattle records were manually reviewed for body visibility and point-cloud completeness.
 
-```bash
-python3 tools/evaluate_elliptical_volume_height_virtual_chest_width_61.py
+A subset of 61 cattle was selected. These cattle had sufficiently complete body structures for geometric measurement, with at least one visible ear used as a basic visibility requirement.
+
+Each selected record contains:
+
+- A usable Topview point cloud
+- A usable Rightview point cloud
+- A ground-truth live-weight measurement
+- Sufficiently complete body contours for torso measurement
+
+## 2. Method
+
+```text
+Depth point clouds
+→ Ground removal and cattle segmentation
+→ PCA body-axis alignment
+→ Core torso detection
+→ Geometric feature extraction
+→ Weight prediction
 ```
 
-This compares ellipse-slice volume with additional height, chest-width, and rump measurements on the 61-cattle analysis subset.
+The main feature is an estimated torso volume. The torso is divided into approximately 1 cm slices. Each slice is treated as an ellipse using its Topview width and corresponding Rightview depth.
+
+$$
+V = \sum_i \frac{\pi}{4} W_i D_i \Delta x
+$$
+
+Here, $W_i$ is body width, $D_i$ is body depth and $\Delta x$ is the slice thickness.
+
+The project also evaluates projected area, projected volume, torso length, local body widths and local body heights. All prediction results are evaluated using leave-one-out cross-validation.
+
+## 3. Results
+
+### 3.1 Quantitative Results
+
+Results on the selected 61 cattle:
+
+| Model | Pearson r | Predictive R² | RMSE | MAE |
+|---|---:|---:|---:|---:|
+| Elliptical torso volume | 0.643 | 0.413 | 52.7 kg | 39.7 kg |
+| Elliptical volume + Rightview median depth | **0.651** | **0.419** | **52.4 kg** | **39.1 kg** |
+| Elliptical volume + rump height + rump width | 0.612 | 0.370 | 54.5 kg | 41.4 kg |
+
+The current best result is a leave-one-out cross-validation MAE of **39.1 kg** and RMSE of **52.4 kg**.
+
+### 3.2 Visual Examples
+
+#### Core Torso Detection
+
+![Core torso detection](docs/images/core-torso-localization.png)
+
+The Topview point cloud is aligned using PCA before the core torso boundaries are detected.
+
+#### Elliptical Torso Slices
+
+![Elliptical torso volume](docs/images/elliptical-torso-volume.png)
+
+Topview width and Rightview depth are combined to estimate the volume of each torso slice.
+
+#### Actual and Predicted Weight
+
+![Actual versus predicted weight](docs/images/actual-vs-predicted-weight.png)
+
+The plot compares measured cattle weight with leave-one-out cross-validation predictions.
+
+## 4. Limitations
+
+- The current evaluation contains only 61 manually selected cattle.
+- Manual data selection may introduce sample-selection bias.
+- Topview and Rightview measurements are matched using relative body positions rather than calibrated multi-camera coordinates.
+- Walking posture, leg position and incomplete body contours can affect geometric measurements.
+- The results have not been validated on cattle from different breeds or farms.
+- This is a research prototype rather than a production weighing system.

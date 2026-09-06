@@ -11,6 +11,13 @@ dataset/**
 *.xls
 *.ndjson
 
+# Curated README figures
+!docs/
+!docs/images/
+!docs/images/core-torso-localization.png
+!docs/images/elliptical-torso-volume.png
+!docs/images/actual-vs-predicted-weight.png
+
 # Python and local tool caches
 __pycache__/
 *.py[cod]
