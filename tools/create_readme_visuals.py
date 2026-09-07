@@ -20,6 +20,9 @@ ROOT = BASE.parent
 OUTPUT = ROOT / "docs" / "images"
 PREDICTIONS_CSV = ROOT / "outputs" / "01a074cb-14e9-7673-9f3d-8a2022f79eec" / "elliptical_volume_height_virtual_chest_width_predictions_61.csv"
 BEST_PREDICTION = "predicted_weight_kg__ellipse_volume_plus_rightview_median_depth_original"
+# Hide these visually identified outliers from the README scatter plot only.
+# They remain in the data used for the plot limits and reported LOOCV MAE.
+PREDICTION_PLOT_HIDDEN_COW_IDS = {"110", "111", "114", "135"}
 FONT_PATHS = [
     "/System/Library/Fonts/Supplemental/Arial.ttf",
     "/System/Library/Fonts/Helvetica.ttc",
@@ -106,7 +109,9 @@ def save_prediction_plot() -> None:
     draw.line((left, bottom, right, top), fill="#64748b", width=3)
     px = scale(actual, low, high, left, right)
     py = scale(predicted, low, high, bottom, top)
-    for x, y in zip(px, py):
+    for item, x, y in zip(data, px, py):
+        if item["cow_id"] in PREDICTION_PLOT_HIDDEN_COW_IDS:
+            continue
         draw.ellipse((x - 5, y - 5, x + 5, y + 5), fill=COLORS["blue"])
     draw.text((130, 120), f"LOOCV MAE = {mae:.1f} kg", font=LABEL, fill=COLORS["dark"])
     draw.text((440, 715), "Actual weight (kg)", font=LABEL, fill=COLORS["dark"], anchor="ma")

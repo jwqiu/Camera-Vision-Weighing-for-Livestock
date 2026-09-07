@@ -1,6 +1,6 @@
 # Camera Vision Weighing for Livestock
 
-This project estimates cattle live weight from Topview and Rightview depth point clouds. It uses automatic point-cloud processing and geometric body measurements instead of manual feature annotation.
+This project estimates cattle live weight from Topview and Rightview depth point clouds. It uses a rule-based point-cloud processing pipeline to automatically extract hand-designed geometric body measurements, rather than relying on manually annotated body landmarks or contours.
 
 ![Cow 1 Topview and Rightview RGB images with corresponding point clouds](docs/images/cow-001-rgb-pointcloud-2x2.png)
 
@@ -50,26 +50,42 @@ Topview and Rightview depth data
 
 ### 2.1 Point-cloud Processing
 
-The raw point clouds contain the cattle together with the floor, fences and other surrounding structures. Ground removal and cattle segmentation are applied to isolate the animal. The segmented body is then aligned along its principal axis using principal component analysis (PCA), providing a consistent coordinate system for geometric measurement.
+The raw point clouds contain not only the cattle but also the floor, fences and other surrounding structures. A ground plane is first estimated and removed. Height-based connected-component segmentation is then used to isolate the main cattle body from the remaining scene.
+
+Because cattle may appear at different orientations in the camera view, principal component analysis (PCA) is applied to the segmented Topview point cloud. The dominant horizontal PCA axis is used as the longitudinal body axis, providing a consistent coordinate system for subsequent measurements.
 
 ### 2.2 Body-dimension Extraction
 
-After alignment, the core torso region is identified to reduce the influence of the head, neck, legs and tail. Geometric measurements are extracted from the Topview and Rightview point clouds, including:
+Body measurements are focused on the core torso because the head, neck, legs and tail are more strongly affected by posture, movement and incomplete visibility. After PCA alignment, the body-width profile along the longitudinal axis is analysed to identify the rear and front boundaries of the core torso.
+
+#### Core Torso Localization
+
+![Core torso localization](docs/images/core-torso-localization.png)
+
+The points between the detected rear and front boundaries are retained as the core torso region. Geometric measurements are then extracted from the Topview and Rightview point clouds, including:
 
 - Torso length
 - Topview body width
 - Rightview body depth
-- Projected body area
-- Local body widths and depths
+- Projected torso area
+- Local torso widths and depths
 - Estimated torso volume
 
-The main three-dimensional feature is the estimated torso volume. The torso is divided into approximately 1 cm slices, and each slice is approximated as an ellipse using its Topview width and corresponding Rightview depth.
+The Topview point cloud provides the torso length, horizontal widths and projected area, while the corresponding Rightview point cloud provides vertical body-depth measurements. These complementary measurements are used individually as prediction features and are also combined to estimate torso volume.
+
+#### Elliptical Torso-volume Estimation
+
+The core torso is divided along its longitudinal axis into slices approximately 1 cm thick. For each slice, the cross-section is approximated as an ellipse using its Topview width and corresponding Rightview depth.
 
 $$
 V = \sum_i \frac{\pi}{4} W_i D_i \Delta x
 $$
 
-Here, $W_i$ is the Topview body width, $D_i$ is the corresponding Rightview body depth and $\Delta x$ is the slice thickness.
+Here, $W_i$ is the Topview width of slice $i$, $D_i$ is its corresponding Rightview depth and $\Delta x$ is the slice thickness. The estimated total torso volume is obtained by summing the volumes of all slices.
+
+![Elliptical torso-volume estimation](docs/images/elliptical-torso-volume.png)
+
+The diagram illustrates how the Topview width and Rightview depth are combined to construct an elliptical cross-section for each torso slice.
 
 ### 2.3 Weight Prediction and Evaluation
 
@@ -91,19 +107,7 @@ Results on the selected 61 cattle:
 
 The current best result is a leave-one-out cross-validation MAE of **39.1 kg**.
 
-### 3.2 Visual Examples
-
-#### Core Torso Detection
-
-![Core torso detection](docs/images/core-torso-localization.png)
-
-The Topview point cloud is aligned using PCA before the core torso boundaries are detected.
-
-#### Elliptical Torso Slices
-
-![Elliptical torso volume](docs/images/elliptical-torso-volume.png)
-
-Topview width and Rightview depth are combined to estimate the volume of each torso slice.
+### 3.2 Prediction Visualization
 
 #### Actual and Predicted Weight
 
@@ -113,9 +117,6 @@ The plot compares measured cattle weight with leave-one-out cross-validation pre
 
 ## 4. Limitations
 
-- The current evaluation contains only 61 manually selected cattle.
-- Manual data selection may introduce sample-selection bias.
-- Topview and Rightview measurements are matched using relative body positions rather than calibrated multi-camera coordinates.
-- Walking posture, leg position and incomplete body contours can affect geometric measurements.
-- The results have not been validated on cattle from different breeds or farms.
-- This is a research prototype rather than a production weighing system.
+- Data quality in the original dataset is inconsistent: many cattle have missing head-and-neck depth data or incomplete body point clouds. Therefore, 61 cattle with relatively complete body structures were manually selected for evaluation, which may introduce sample-selection bias.
+- Topview widths and Rightview depths are matched according to their relative positions along the torso, as the two camera views are not spatially calibrated. Consequently, paired measurements may not represent exactly the same physical body cross-section.
+- Cattle posture and incomplete body contours can cause errors in the rule-based localization of the core torso and the resulting geometric measurements. Future work could use computer-vision methods to segment the core torso automatically while excluding the head, neck, legs and tail, potentially improving measurement robustness.
